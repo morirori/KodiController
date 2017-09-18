@@ -1,0 +1,87 @@
+﻿<Window x:Class="KodiController.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:KodiController"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="535.011" Width="1111.27">
+    <Grid Margin="0,0,-21,-298" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Left" Width="746">
+
+        <Grid.RenderTransform>
+            <TransformGroup>
+                <ScaleTransform/>
+                <SkewTransform/>
+                <RotateTransform Angle="-0.15"/>
+                <TranslateTransform/>
+            </TransformGroup>
+        </Grid.RenderTransform>
+        <Button x:Name="StartStartBtn" Content="Start" HorizontalAlignment="Left" Margin="28,434,0,0" VerticalAlignment="Top" Width="160" Click="Start_Click" Height="50" FontSize="25"/>
+        <Label x:Name="ConnectionIDLBL" Content="ConnectionID" HorizontalAlignment="Left" Margin="28,33,0,0" VerticalAlignment="Top" Grid.ColumnSpan="3" Height="26" Width="82"/>
+        <Label x:Name="StatusLBL" Content="Status" Margin="28,64,73,0" VerticalAlignment="Top" RenderTransformOrigin="0.119,-0.621" Grid.ColumnSpan="3" Height="26"/>
+        <Label x:Name="KinectAngle" Content="Kinect Angle" Margin="263,434,322,0" VerticalAlignment="Top" FontSize="25" RenderTransformOrigin="0.119,-0.621" Height="49">
+            <Label.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0.054"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Label.RenderTransform>
+        </Label>
+        <TextBox x:Name="ConnectionIDTB" HorizontalAlignment="Left" Height="22" Margin="115,37,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="541"/>
+        <TextBox x:Name="StatusTB" HorizontalAlignment="Left" Height="22" Margin="118,68,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="538"/>
+        <Button x:Name="angleUp" Content="UP" HorizontalAlignment="Left" Height="22" Margin="496,461,0,0" VerticalAlignment="Top" Width="160" Click="angleUp_Click" FontSize="12"/>
+        <Button x:Name="angleDown" Content="Down" HorizontalAlignment="Left" Height="22" Margin="496,434,0,0" VerticalAlignment="Top" Width="160" Click="angleDown_Click" FontSize="12
+                "/>
+        <TextBox x:Name="swipeUP" HorizontalAlignment="Left" Height="80" Margin="28,121,0,0" TextWrapping="Wrap" Text="Swipe UP" VerticalAlignment="Top" Width="160" FontSize="25" TextAlignment="Center"/>
+        <TextBox x:Name="swipeDown" HorizontalAlignment="Left" Height="80" Margin="496,121,0,0" TextWrapping="Wrap" Text="Swipe Down" VerticalAlignment="Top" Width="160" FontSize="25" TextAlignment="Center"/>
+        <TextBox x:Name="swipeLeft" HorizontalAlignment="Left" Height="80" Margin="263,121,0,0" TextWrapping="Wrap" Text="Swipe Left" VerticalAlignment="Top" Width="160" FontSize="25" TextAlignment="Center"/>
+        <TextBox x:Name="swipeRight" Grid.Column="1" HorizontalAlignment="Left" Height="80" Margin="28,233,0,0" TextWrapping="Wrap" Text="Swipe right" VerticalAlignment="Top" Width="160" Grid.ColumnSpan="3" FontSize="25" TextAlignment="Center" AcceptsTab="True"/>
+        <TextBox x:Name="waveRight" Grid.Column="1" HorizontalAlignment="Left" Height="80" Margin="28,340,0,0" TextWrapping="Wrap" Text="Wave Right" VerticalAlignment="Top" Width="160" Grid.ColumnSpan="3" FontSize="25" TextAlignment="Center"/>
+        <TextBox x:Name="waveLeft" HorizontalAlignment="Left" Height="80" Margin="263,340,0,0" TextWrapping="Wrap" Text="Wave left" VerticalAlignment="Top" Width="160" FontSize="25" TextAlignment="Center"/>
+        <TextBox x:Name="zoomIn" HorizontalAlignment="Left" Height="80" Margin="496,233,0,0" TextWrapping="Wrap" Text="Zoom in" VerticalAlignment="Top" Width="160" FontSize="25" TextAlignment="Center"/>
+        <TextBox x:Name="swipeWithTwo" HorizontalAlignment="Left" Height="80" Margin="263,233,0,0" TextWrapping="Wrap" Text="Swipe With Two Hands" VerticalAlignment="Top" Width="160" FontSize="25" TextAlignment="Center"/>
+        <TextBox x:Name="clapHands" HorizontalAlignment="Left" Height="80" Margin="496,340,0,0" TextWrapping="Wrap" Text="ClapHands" VerticalAlignment="Top" Width="160"  FontSize="25" TextAlignment="Center"/>
+        <Label x:Name="label" Content="Right Hand" HorizontalAlignment="Left" Margin="671,27,-27,0" VerticalAlignment="Top" Width="102" FontSize="18" />
+        <Label x:Name="leftHandX" Height="33" Margin="819,71,-155,0"  Content="X" FontSize="18" VerticalAlignment="Top" Width="82" />
+        <Label x:Name="leftHandZ" HorizontalAlignment="Left" Height="33" Margin="1007,80,-343,0" FontSize="18" Content="Z" VerticalAlignment="Top"  Width="82"/>
+        <Label x:Name="leftHandY" HorizontalAlignment="Left" Height="33" Margin="906,71,-242,0" FontSize="18"  Content="Y" VerticalAlignment="Top"  Width="82"/>
+        <Label x:Name="leftHand" Content="Left Hand" HorizontalAlignment="Left" Margin="671,68,-27,0" FontSize="18" VerticalAlignment="Top"  Width="102"/>
+        <Label x:Name="rightHandX" Height="33" Margin="819,33,-155,0" FontSize="18"  Content="X"  VerticalAlignment="Top" Width="82" />
+        <Label x:Name="rightHandY" Height="33" Margin="906,31,-242,0" FontSize="18" Content="Y"  VerticalAlignment="Top"  Width="82" />
+        <Label x:Name="rightHandZ" Height="33" Margin="1007,40,-343,0" FontSize="18" Content="Z"  VerticalAlignment="Top"  Width="82" />
+        <Label x:Name="label_Copy" Content="X" HorizontalAlignment="Left" Margin="819,1,-155,0" FontSize="18" VerticalAlignment="Top" Width="82"  RenderTransformOrigin="0.925,0.074"/>
+        <Label x:Name="label_Copy1" Content="Y" HorizontalAlignment="Left" Margin="906,1,-242,0" FontSize="18" VerticalAlignment="Top" Width="82" RenderTransformOrigin="0.925,0.074"/>
+        <Label x:Name="label_Copy2" Content="Z" HorizontalAlignment="Left" Margin="1007,1,-343,0" FontSize="18" VerticalAlignment="Top" Width="82"  RenderTransformOrigin="0.925,0.074"/>
+        <Label x:Name="leftHand_Copy" Content="Left Shoulder" HorizontalAlignment="Left" Margin="671,121,-49,0" VerticalAlignment="Top" FontSize="18" Width="124"/>
+        <Label x:Name="leftShoulderX" Height="33" Margin="819,119,-155,0" Content="X" FontSize="18" VerticalAlignment="Top" Width="82" />
+        <Label x:Name="leftShoulderY" Height="33" Margin="906,119,-242,0"  Content="Y" FontSize="18" VerticalAlignment="Top" Width="82" />
+        <Label x:Name="leftShoulderZ" Height="33" Margin="1007,121,-343,0" Content="Z" FontSize="18" VerticalAlignment="Top" Width="82" />
+        <Label x:Name="rightShoulder" Content="Right Shoulder" HorizontalAlignment="Left" Margin="671,233,-65,0" FontSize="18" VerticalAlignment="Top" Width="140"/>
+        <Label x:Name="rightShoulderX" Height="33" Margin="819,237,-155,0"  Content="X" VerticalAlignment="Top" FontSize="18"  Width="82" RenderTransformOrigin="0.616,2.655"/>
+        <Label x:Name="rightShoulderY" Height="33" Margin="906,237,-242,0"  Content="Y" FontSize="18" VerticalAlignment="Top"  Width="82"/>
+        <Label x:Name="rightShoulderZ" Height="33" Margin="1007,237,-343,0" Content="Z" FontSize="18" VerticalAlignment="Top"  Width="82" RenderTransformOrigin="1.899,0.672"/>
+        <Label x:Name="leftElblow" Content="Left Elblow" HorizontalAlignment="Left"  FontSize="18" Margin="671,279,-19,0" VerticalAlignment="Top" Width="94"/>
+        <Label x:Name="leftElblowX" Height="33" Margin="819,280,-155,0"  Content="X" FontSize="18" VerticalAlignment="Top"  Width="82" RenderTransformOrigin="0.616,2.655"/>
+        <Label x:Name="leftElblowY" Height="33" Margin="906,279,-242,0"  Content="Y" FontSize="18" VerticalAlignment="Top"  Width="82" RenderTransformOrigin="0.616,2.655" />
+        <Label x:Name="leftElblowZ" Height="33" Margin="1007,280,-343,0" Content="Z" FontSize="18" VerticalAlignment="Top"  Width="82" RenderTransformOrigin="0.616,2.655"/>
+        <Label x:Name="rightElblow" Content="Right Elblow" HorizontalAlignment="Left" FontSize="18" Margin="671,339,-65,0" VerticalAlignment="Top" Width="140"/>
+        <Label x:Name="rightElblowX" Height="33" Margin="819,340,-155,0"  Content="X" FontSize="18" VerticalAlignment="Top"  Width="82" RenderTransformOrigin="0.616,2.655"/>
+        <Label x:Name="rightElblowY" Height="33" Margin="906,340,-242,0"  Content="Y" FontSize="18" VerticalAlignment="Top"  Width="82" RenderTransformOrigin="0.616,2.655"/>
+        <Label x:Name="rightElblowZ" Height="33" Margin="1007,340,-343,0" Content="Z" FontSize="18" VerticalAlignment="Top"  Width="82" RenderTransformOrigin="0.616,2.655"/>
+        <Label x:Name="Hip" Content="Hip" HorizontalAlignment="Left" Margin="671,386,-19,0" FontSize="18" VerticalAlignment="Top" Width="94"/>
+        <Label x:Name="HipX" Height="33" Margin="819,387,-155,0"  Content="X" VerticalAlignment="Top" FontSize="18"  Width="82" RenderTransformOrigin="0.616,2.655"/>
+        <Label x:Name="HipY" Height="33" Margin="906,387,-242,0"  Content="Y" VerticalAlignment="Top" FontSize="18"  Width="82" RenderTransformOrigin="0.616,2.655"/>
+        <Label x:Name="HipZ" Height="33" Margin="1007,387,-343,0"  Content="Z" VerticalAlignment="Top" FontSize="18"  Width="82" RenderTransformOrigin="0.616,2.655"/>
+        <Label x:Name="Head" Content="Head" HorizontalAlignment="Left" Margin="671,433,-19,0" FontSize="18" VerticalAlignment="Top" Width="94"/>
+        <Label x:Name="HeadX" Height="33" Margin="819,434,-155,0"  Content="X" VerticalAlignment="Top" FontSize="18"  Width="82" RenderTransformOrigin="0.616,2.655"/>
+        <Label x:Name="HeadY" Height="33" Margin="906,433,-242,0"  Content="Y" VerticalAlignment="Top" FontSize="18"  Width="82" RenderTransformOrigin="0.616,2.655"/>
+        <Label x:Name="HeadZ" Height="33" Margin="1007,431,-343,0"  Content="Z" VerticalAlignment="Top" FontSize="18"   Width="82" RenderTransformOrigin="0.616,2.655"/>
+        <Label x:Name="shoulderCenter" Content="Shoulder Center" HorizontalAlignment="Left" Margin="671,167,-67,0" FontSize="18" VerticalAlignment="Top" Width="142"/>
+        <Label x:Name="shoulderCenterX" Height="33" Margin="819,168,-155,0"  Content="X" VerticalAlignment="Top" FontSize="18"  Width="82" RenderTransformOrigin="0.616,2.655"/>
+        <Label x:Name="shoulderCenterY" Height="33" Margin="906,168,-242,0"  Content="Y" VerticalAlignment="Top" FontSize="18"   Width="82" RenderTransformOrigin="0.616,2.655"/>
+        <Label x:Name="shoulderCenterZ" Height="33" Margin="1007,168,-343,0"  Content="Z" VerticalAlignment="Top" FontSize="18"  Width="82" RenderTransformOrigin="0.616,2.655"/>
+
+    </Grid>
+</Window>
