@@ -53,6 +53,7 @@ select - clap your hands, hands should be located in the hight of your chest
 back - move your right and left hand in left direction. Right and left hand starting position: Below arms and above hips, on the right side of your body. Left and right hand ending position. Hands below arms and above hips and on the left side of your body.
 
 Contributors
+
 Morawiec Michal
 
 License
