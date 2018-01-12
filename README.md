@@ -18,10 +18,11 @@ Based on gestureType which every event contains. Program will execute KodiFuncti
                     functionController.swipeLeft();
                     break;
                 }
-			}
-		}
+	    }
+	 }
 For Kodi interactiong we are using FunctionController class, this class contains function which are executing correspdonding Kodi's action
 for instance:
+
         FunctionController functionController;
         functionController.swipeRight();
 
