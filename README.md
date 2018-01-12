@@ -32,16 +32,24 @@ for instance:
 Installation
 
 To install this project you need Kinect SDK, you can download it from this page:https://www.microsoft.com/en-us/download/details.aspx?id=40278
-and librare for json serialisation, type this in NuGet package manager: NU Get: Newtonsoft.Json --version 10.0.3
+and librare for json serialisation, type this in NuGet package manager: 
+
+NU Get: Newtonsoft.Json --version 10.0.3
 
 Testing
 
 For propper gesture detection, you have to perform gesture in correct way:
+
 swipe up - rise your right hand above your head
+
 swipe down - rise your left hand below your hips
+
 swipe right - move your left hand in right direction. Left hand starting position: Below arms and above hips, on the left side of your body. Left hand ending position. Hand below arms and above hips and on the right side of your body. For better performance keep your rigt hand around your stomach. 
+
 swipe left - move your right hand in left direction. Right hand starting position: Below arms and above hips, on the right side of your body. Left hand ending position. Hand below arms and above hips and on the left side of your body. For better performance keep your left hand around your stomach. 
+
 select - clap your hands, hands should be located in the hight of your chest
+
 back - move your right and left hand in left direction. Right and left hand starting position: Below arms and above hips, on the right side of your body. Left and right hand ending position. Hands below arms and above hips and on the left side of your body.
 
 Contributors
