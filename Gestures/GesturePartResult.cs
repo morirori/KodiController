@@ -1,8 +1,6 @@
 ﻿
 namespace KodiController.Gestures {
-    /// <summary>
-    /// Represents the gesture part recognition result.
-    /// </summary>
+
     public enum GesturePartResult
     {
         Failed,        // Gesture part failed.

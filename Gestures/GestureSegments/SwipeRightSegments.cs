@@ -2,16 +2,9 @@
 
 namespace KodiController.Gestures.GestureSegments {
 
-    /// <summary>
-    /// The first part of the swipe right gesture
-    /// </summary>
     public class SwipeRightSegment1 : IGestureSegment
     {
-        /// <summary>
-        /// Updates the current gesture.
-        /// </summary>
-        /// <param name="skeleton">The skeleton.</param>
-        /// <returns>A GesturePartResult based on whether the gesture part has been completed.</returns>
+
         public GesturePartResult Update(Skeleton skeleton)
         {
             // //left hand in front of left Shoulder
@@ -42,16 +35,10 @@ namespace KodiController.Gestures.GestureSegments {
         }
     }
 
-    /// <summary>
-    /// The second part of the swipe right gesture
-    /// </summary>
+
     public class SwipeRightSegment2 : IGestureSegment
     {
-        /// <summary>
-        /// Updates the current gesture.
-        /// </summary>
-        /// <param name="skeleton">The skeleton.</param>
-        /// <returns>A GesturePartResult based on whether the gesture part has been completed.</returns>
+
         public GesturePartResult Update(Skeleton skeleton)
         {
             // //left hand in front of left Shoulder
@@ -82,16 +69,8 @@ namespace KodiController.Gestures.GestureSegments {
         }
     }
 
-    /// <summary>
-    /// The third part of the swipe right gesture
-    /// </summary>
     public class SwipeRightSegment3 : IGestureSegment
     {
-        /// <summary>
-        /// Updates the current gesture.
-        /// </summary>
-        /// <param name="skeleton">The skeleton.</param>
-        /// <returns>A GesturePartResult based on whether the gesture part has been completed.</returns>
         public GesturePartResult Update(Skeleton skeleton)
         {
             // //left hand in front of left Shoulder

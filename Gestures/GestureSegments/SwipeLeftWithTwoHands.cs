@@ -3,16 +3,12 @@
 namespace KodiController.Gestures.GestureSegments {
  
         public class SwipeLeftWithTwoHands1 : IGestureSegment {
-            /// <summary>
-            /// Updates the current gesture.
-            /// </summary>
-            /// <param name="skeleton">The skeleton.</param>
-            /// <returns>A GesturePartResult based on whether the gesture part has been completed.</returns>
+
             public GesturePartResult Update(Skeleton skeleton) {
 
                 // right and left hand in front of right shoulder and below shoulder center height
                 if (skeleton.Joints[JointType.HandRight].Position.Z < skeleton.Joints[JointType.ElbowRight].Position.Z && skeleton.Joints[JointType.HandRight].Position.Y < skeleton.Joints[JointType.ShoulderCenter].Position.Y
-                   && skeleton.Joints[JointType.HandLeft].Position.Z < skeleton.Joints[JointType.ElbowLeft].Position.Z && skeleton.Joints[JointType.HandLeft].Position.Y < skeleton.Joints[JointType.ShoulderCenter].Position.Y) {
+                   && skeleton.Joints[JointType.HandLeft].Position.Y < skeleton.Joints[JointType.ShoulderCenter].Position.Y) {
                     // right and left hand below shoulder height but above hip height
                     if (skeleton.Joints[JointType.HandRight].Position.Y < skeleton.Joints[JointType.Head].Position.Y && skeleton.Joints[JointType.HandRight].Position.Y > skeleton.Joints[JointType.HipCenter].Position.Y
                         && skeleton.Joints[JointType.HandLeft].Position.Y < skeleton.Joints[JointType.Head].Position.Y && skeleton.Joints[JointType.HandLeft].Position.Y > skeleton.Joints[JointType.HipCenter].Position.Y) {
@@ -29,19 +25,12 @@ namespace KodiController.Gestures.GestureSegments {
             }
         }
 
-        /// <summary>
-        /// The second part of the swipe left gesture
-        /// </summary>
+
         public class SwipeLeftWithTwoHands2 : IGestureSegment {
-            /// <summary>
-            /// Updates the current gesture.
-            /// </summary>
-            /// <param name="skeleton">The skeleton.</param>
-            /// <returns>A GesturePartResult based on whether the gesture part has been completed.</returns>
             public GesturePartResult Update(Skeleton skeleton) {
             // right and left hand in front of right shoulder and below shoulder center height
             if (skeleton.Joints[JointType.HandRight].Position.Z < skeleton.Joints[JointType.ElbowRight].Position.Z && skeleton.Joints[JointType.HandRight].Position.Y < skeleton.Joints[JointType.ShoulderCenter].Position.Y
-              && skeleton.Joints[JointType.HandLeft].Position.Z < skeleton.Joints[JointType.ElbowLeft].Position.Z && skeleton.Joints[JointType.HandLeft].Position.Y < skeleton.Joints[JointType.ShoulderCenter].Position.Y) {
+              && skeleton.Joints[JointType.HandLeft].Position.Y < skeleton.Joints[JointType.ShoulderCenter].Position.Y) {
                 // right and left  hand below shoulder height but above hip height
                 if (skeleton.Joints[JointType.HandRight].Position.Y < skeleton.Joints[JointType.Head].Position.Y && skeleton.Joints[JointType.HandRight].Position.Y > skeleton.Joints[JointType.HipCenter].Position.Y
                    && skeleton.Joints[JointType.HandLeft].Position.Y < skeleton.Joints[JointType.Head].Position.Y && skeleton.Joints[JointType.HandLeft].Position.Y > skeleton.Joints[JointType.HipCenter].Position.Y) {
@@ -58,19 +47,13 @@ namespace KodiController.Gestures.GestureSegments {
             }
         }
 
-        /// <summary>
-        /// The third part of the swipe left gesture
-        /// </summary>
+
         public class SwipeLeftWithTwoHands3 : IGestureSegment {
-            /// <summary>
-            /// Updates the current gesture.
-            /// </summary>
-            /// <param name="skeleton">The skeleton.</param>
-            /// <returns>A GesturePartResult based on whether the gesture part has been completed.</returns>
+
             public GesturePartResult Update(Skeleton skeleton) {
             // Right hand in front of right Shoulder
             if (skeleton.Joints[JointType.HandRight].Position.Z < skeleton.Joints[JointType.ElbowRight].Position.Z && skeleton.Joints[JointType.HandRight].Position.Y < skeleton.Joints[JointType.ShoulderCenter].Position.Y
-                && skeleton.Joints[JointType.HandLeft].Position.Z < skeleton.Joints[JointType.ElbowLeft].Position.Z && skeleton.Joints[JointType.HandLeft].Position.Y < skeleton.Joints[JointType.ShoulderCenter].Position.Y) {
+                 && skeleton.Joints[JointType.HandLeft].Position.Y < skeleton.Joints[JointType.ShoulderCenter].Position.Y) {
 
                 // right hand below shoulder height but above hip height
                 if (skeleton.Joints[JointType.HandRight].Position.Y < skeleton.Joints[JointType.Head].Position.Y && skeleton.Joints[JointType.HandRight].Position.Y > skeleton.Joints[JointType.HipCenter].Position.Y

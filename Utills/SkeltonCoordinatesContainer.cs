@@ -19,7 +19,7 @@ namespace KodiController.Utills {
         public void setSkeltonJoints(Skeleton skelton,  JointType jointType , KinectSensor sensor) {
             var jointDict = new Dictionary<String, String>();
             var mapper = new CoordinateMapper(sensor);
-            var position = skelton.Joints[JointType.HandRight].Position;
+            var position = skelton.Joints[jointType].Position;
             var rightHand = mapper.MapSkeletonPointToDepthPoint(position,DepthImageFormat.Resolution640x480Fps30);
             jointDict.Add("X", rightHand.X.ToString());
             jointDict.Add("Y",rightHand.Y.ToString());

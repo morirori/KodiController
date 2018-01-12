@@ -2,9 +2,7 @@
 
 
 namespace KodiController.Gestures {
-    /// <summary>
-    /// The gesture event arguments.
-    /// </summary>
+
     public class GestureEventArgs : EventArgs
     {
 

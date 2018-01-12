@@ -126,7 +126,7 @@ namespace KodiController {
             switch (gesture) {
                 case (GestureType.ComeToMe): {
                     textboxes["zoomIn"].Background = Brushes.Green;
-                    functionController.select();
+                   // functionController.select();
                     break;
                 }
                 case (GestureType.SwipeRight): {
@@ -153,7 +153,7 @@ namespace KodiController {
                 }
                 case (GestureType.ClapHands): {
                     textboxes["clapHands"].Background = Brushes.Green;
-                    functionController.playAndPause();
+                    functionController.select();
                     break;
                 }
                 case (GestureType.SwipeLeftWithTwoHands): {
@@ -168,7 +168,7 @@ namespace KodiController {
                 entry.Value.Background = Brushes.White;
             }
 
-        }
+        }   
         private void readJointsValues(Skeleton skelton) {
             var coordintaesMapper = new SkeltonCoordinatesContainer(skelton);
             coordintaesMapper.setSkeltonJoints(skelton, JointType.HandRight, sensor);

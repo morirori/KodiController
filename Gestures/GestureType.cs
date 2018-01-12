@@ -1,8 +1,6 @@
 ﻿
 namespace KodiController.Gestures {
-    /// <summary>
-    /// Represents the predefined gesture types.
-    /// </summary>
+
     public enum GestureType
     {
 

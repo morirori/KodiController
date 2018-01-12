@@ -4,9 +4,6 @@ using System;
 
 namespace KodiController.Gestures {
 
-    /// <summary>
-    /// Represents a Kinect <see cref="Gesture"/>.
-    /// </summary>
     class Gesture
     {
        
